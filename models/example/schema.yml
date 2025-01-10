@@ -19,3 +19,12 @@ models:
             tests:
                 - unique
                 - not_null
+    - name: sgt_order_filter_JPM
+      description: "Estado de Ordenes"
+      columns:
+          - name: status
+            description: "Estado de ordenes"
+            tests:
+                - not_null
+                - accepted_values:
+                    values: ['placed','shipped']
